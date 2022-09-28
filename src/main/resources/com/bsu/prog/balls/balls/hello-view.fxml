@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bsu.prog.balls.balls.HelloController">
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button fx:id="startBtn" minWidth="50.0" mnemonicParsing="false" onAction="#onStart" text="Start" />
+            <Button fx:id="pauseBtn" minWidth="50.0" mnemonicParsing="false" onAction="#onPause" text="Pause" />
+            <Button fx:id="resumeBtn" minWidth="50.0" mnemonicParsing="false" onAction="#onResume" text="Resume" />
+            <Button fx:id="stopBtn" minWidth="50.0" mnemonicParsing="false" onAction="#onStop" text="Stop" />
+        </items>
+      </ToolBar>
+   </bottom>
+   <center>
+      <Pane fx:id="board" prefHeight="560.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+         <children>
+            <Circle fill="DODGERBLUE" layoutX="229.0" layoutY="146.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+         </children></Pane>
+   </center>
+</BorderPane>
