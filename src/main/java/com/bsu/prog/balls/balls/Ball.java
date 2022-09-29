@@ -25,9 +25,6 @@ public class Ball {
         circle =_circle;
     }
 
-    public  Point2D getCurrCoord(){
-        return  coord;
-    }
 
     public Point2D calcNewPos(Point2D x1y1,Point2D x2y2 ){
 

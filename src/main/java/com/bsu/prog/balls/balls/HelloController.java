@@ -32,7 +32,7 @@ public class HelloController {
     private  Point2D x1y1;
 
     private List<BallsRender> WorkingThreads =new LinkedList<>();
-    private CountDownLatch doneLatch, alertLch;
+    private CountDownLatch doneLatch;
     private  Thread awitAllThr;
 
 
@@ -49,7 +49,6 @@ public class HelloController {
         x2y2 = new Point2D(width,height);
         x1y1 = new Point2D(0,0);
         doneLatch =new CountDownLatch(BALLS_COUNT);
-        alertLch =new CountDownLatch(1);
         var awitAll = new Task<>() {
             @Override
             protected Void call() throws Exception {
@@ -61,7 +60,6 @@ public class HelloController {
                                 .filter(response -> response == ButtonType.OK)
                                 .ifPresent(response -> {
                                     board.getChildren().clear();
-                                    alertLch.countDown();
                                     awitAllThr = null;
                                 }); //removes dots after pressing button
                     });

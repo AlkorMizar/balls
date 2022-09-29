@@ -22,7 +22,6 @@
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </padding>
          <children>
-            <Circle fill="DODGERBLUE" layoutX="229.0" layoutY="146.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
          </children></Pane>
    </center>
 </BorderPane>
